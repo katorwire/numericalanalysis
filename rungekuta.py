@@ -1,5 +1,5 @@
 import math
-from tabulate import tabulate
+
 '''
 4 stage rungu kuta problem for 
 value problem y'=3x^2y in the interval x€[0,1].
@@ -44,7 +44,7 @@ def runge(y0, x0, h, int_val):  # in this function we collect certain set of par
         print('the true values at the corresponding ',
               n, 'values are', true_value)
 
-        print(tabulate([['n', 'k1', 'k2', 'k3', 'k4', 'y_next_value']]))
+        
     print()
 
 
