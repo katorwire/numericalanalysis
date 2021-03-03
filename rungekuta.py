@@ -13,6 +13,8 @@ def runge(y0, x0, h, int_val):  # in this function we collect certain set of par
     '''
     for n in range(11):
         print()
+        print('--+'*24)
+
         print('after n = ', n)
 
         k1 = int_val * pow(x0, 2) * y0
@@ -34,15 +36,21 @@ def runge(y0, x0, h, int_val):  # in this function we collect certain set of par
         the respective formulas above for k1, k2, k3, k4
         '''
 
-        true_value = math.e**((0.1*n)**2)
+        true_value = math.e**((0.1*n)**2) # the true value at k1 is actually e^(0.1 * x)^2
+        eror = abs(true_value - y_next_value) # we use this line to get the absolute erro
 
         print('the values of k1 at n = {} is {}'.format(n, k1))
         print('the values of k2 at n = {} is {}'.format(n, k4))
         print('the values of k3 at n = {} is {}'.format(n, k3))
         print('the values of k4 at n = {} is {}'.format(n, k4))
+        print('the value of y', n, 'is', y_next_value)
+
 
         print('the true values at the corresponding ',
               n, 'values are', true_value)
+        print('the absolute error is', eror)
+        print('--+'*24)
+
 
         
     print()
